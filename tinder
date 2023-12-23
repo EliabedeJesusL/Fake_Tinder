@@ -1,0 +1,17 @@
+import modulo
+
+def main():
+    qnt_M = int(); qnt_F = int(); qnt_perguntas = int(); dict_M = dict(); dict_F = dict()
+
+    qnt_M = int(input("Quantos machos? "))
+    qnt_F = int(input("Quantas fêmeas? "))
+    qnt_perguntas = int(input("Quantas perguntas? "))
+
+    dict_M = modulo.f_dicionario(qnt_M, qnt_perguntas, "M")
+    dict_F = modulo.f_dicionario(qnt_F, qnt_perguntas, "F")
+    casais = modulo.f_match(dict_M, dict_F)
+    modulo.f_imprime(casais)
+
+
+if  __name__=="__main__":
+    main()
